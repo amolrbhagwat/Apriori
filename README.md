@@ -1,18 +1,21 @@
-Apriori
+# Apriori Algorithm
 
 This project demonstrates the Apriori algorithm.
 
 The program generates:
-* Frequent itemsets using Fk-1*F1 and Fk-1*Fk-1 methods.
+* Frequent itemsets using F<sub>k-1</sub> * F<sub>1</sub> and F<sub>k-1</sub> * F<sub>k-1</sub> methods.
 * Frequent Closed Itemsets
 * Maximal Frequent Itemsets
 * Association Rules
 * Enumeration of rules from Confidence-based pruning
 
-Some datasets which can be used are:
-1. Car: 1728 records, 7 attributes - https://archive.ics.uci.edu/ml/datasets/Car+Evaluation
-2. Mushroom: 8124 records, 23 attributes - https://archive.ics.uci.edu/ml/datasets/Mushroom
-3. Nursery: 12960 records, 9 attributes - https://archive.ics.uci.edu/ml/datasets/Nursery
+Some datasets which have been tried are:
+
+- Car: 1728 records, 7 attributes from https://archive.ics.uci.edu/ml/datasets/Car+Evaluation
+
+- Mushroom: 8124 records, 23 attributes from https://archive.ics.uci.edu/ml/datasets/Mushroom
+
+- Nursery: 12960 records, 9 attributes from https://archive.ics.uci.edu/ml/datasets/Nursery
 
 These data sets are converted into a sparse binary matrix using 'binarizer.awk', by running the command:
 `$ gawk -f binarizer.awk datasetfile > matrixfile`
@@ -26,6 +29,7 @@ After the entire file has been scanned, it retrieves each line, and then based o
 The underlying meaning of the data is not entirely lost, as correlated attribute values will appear in the same order, and hence there is an increased probability that two or more correlated attributes will be assigned the same values.
 
 The main Apriori program is in Java, and requires the following parameters:
+
 1. matrixfile
 2. columnsfile
 3. minsupportpercentage
